@@ -1,5 +1,10 @@
 #! /bin/bash
 
+wait_user() {
+    echo -e 'press any key to continue...\n'
+    read -n 1 -s -r
+}
+
 
 DISK_DEVICE="/dev/sda"
 
