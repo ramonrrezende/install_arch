@@ -27,6 +27,10 @@ wait_user() {
 }
 
 
+# hostname
+execute_command hostnamectl set-hostname $HOST_NAME
+execute_command passwd
+
 su -
 
 echo "uncoment line %wheel ALL=(ALL:ALL) ALL"
