@@ -20,6 +20,7 @@ execute_command() {
             return
         fi
     fi
+
     "$@"
     if [ $? -ne 0 ]; then
         handle_error "Command '$*' failed"
