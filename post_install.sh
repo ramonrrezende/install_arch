@@ -37,10 +37,10 @@ execute_command hostnamectl set-hostname $HOST_NAME
 execute_command passwd
 
 echo "uncoment line %wheel ALL=(ALL:ALL) ALL"
-su -
+# su -
 # EDITOR=nano visudo
 
-sudo dhcpcd
+# sudo dhcpcd
 
 # graphic interface
 sudo pacman -S xorg-server xorg-xinit xorg-apps mesa
