@@ -10,5 +10,5 @@ KEYBOARD="br-abnt2"
 loadkeys $KEYBOARD
 
 # network
-iwtcl --passphrase $WIFI_PASSWD station $WIFI_DEVICE connect $WIFI_SSID
+iwctl --passphrase $WIFI_PASSWD station $WIFI_DEVICE connect $WIFI_SSID
 
