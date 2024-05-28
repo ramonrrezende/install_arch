@@ -52,17 +52,17 @@ execute_command sudo pacman -Sy nvidia nvidia-settings
 
 
 # desktop environment
-execute_command pacman -Sy firefox #browser
-execute_command pacman -Sy dolphin #file manager
-execute_command pacman -Sy wofi #application starter
-execute_command pacman -Sy hyprpaper #application starter
-execute_command pacman -Sy alacritty #terminal emulator
+execute_command sudo pacman -Sy firefox #browser
+execute_command sudo pacman -Sy dolphin #file manager
+execute_command sudo pacman -Sy wofi #application starter
+execute_command sudo pacman -Sy hyprpaper #application starter
+execute_command sudo pacman -Sy alacritty #terminal emulator
 
-execute_command pacman -Sy gnome-extra gnome-terminal
-execute_command pacman -Sy deepin deepin-extra
-execute_command pacman -Sy bungie-desktop
-execute_command pacman -Sy i3-wm i3status i3lock i3-gaps dmenu termite dunst
-execute_command pacman -Sy hyprland hyprland-git
+execute_command sudo pacman -Sy gnome-extra gnome-terminal
+execute_command sudo pacman -Sy deepin deepin-extra
+execute_command sudo pacman -Sy bungie-desktop
+execute_command sudo pacman -Sy i3-wm i3status i3lock i3-gaps dmenu termite dunst
+execute_command sudo pacman -Sy hyprland hyprland-git
 
 
 execute_command cp config_files/scripts/* ~
