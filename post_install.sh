@@ -43,26 +43,26 @@ echo "uncoment line %wheel ALL=(ALL:ALL) ALL"
 # sudo dhcpcd
 
 # graphic interface
-execute_command sudo pacman -S xorg-server xorg-xinit xorg-apps mesa
+execute_command sudo pacman -Sy xorg-server xorg-xinit xorg-apps mesa
 
 # drivers
 # sudo pacman -S xf86-video-intel
-execute_command sudo pacman -S nvidia nvidia-settings
+execute_command sudo pacman -Sy nvidia nvidia-settings
 # sudo pacman -S xf86-video-amdgpu
 
 
 # desktop environment
-execute_command pacman -S firefox #browser
-execute_command pacman -S dolphin #file manager
-execute_command pacman -S wofi #application starter
-execute_command pacman -S hyprpaper #application starter
-execute_command pacman -S alacritty #terminal emulator
+execute_command pacman -Sy firefox #browser
+execute_command pacman -Sy dolphin #file manager
+execute_command pacman -Sy wofi #application starter
+execute_command pacman -Sy hyprpaper #application starter
+execute_command pacman -Sy alacritty #terminal emulator
 
-execute_command pacman -S gnome-extra gnome-terminal
-execute_command pacman -S deepin deepin-extra
-execute_command pacman -S bungie-desktop
-execute_command pacman -S i3-wm i3status i3lock i3-gaps dmenu termite dunst
-execute_command pacman -S hyprland hyprland-git
+execute_command pacman -Sy gnome-extra gnome-terminal
+execute_command pacman -Sy deepin deepin-extra
+execute_command pacman -Sy bungie-desktop
+execute_command pacman -Sy i3-wm i3status i3lock i3-gaps dmenu termite dunst
+execute_command pacman -Sy hyprland hyprland-git
 
 
 execute_command cp config_files/scripts/* ~
