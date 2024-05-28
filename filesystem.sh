@@ -12,7 +12,7 @@ handle_error() {
 execute_command() {
     echo "Running command: $*"
     echo ""
-    read -p "Do you want to execute this command? (y/n): " user_input
+    read -p -n 1 -s "Do you want to execute this command? (y/n): " user_input
     echo $user_input
     if [ "$user_input" != "y" ]; then
         echo "Command skipped by user."
