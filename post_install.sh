@@ -59,10 +59,10 @@ execute_command sudo pacman -Sy hyprpaper #application starter
 execute_command sudo pacman -Sy alacritty #terminal emulator
 
 execute_command sudo pacman -Sy gnome-extra gnome-terminal
-execute_command sudo pacman -Sy deepin deepin-extra
 execute_command sudo pacman -Sy bungie-desktop
 execute_command sudo pacman -Sy i3-wm i3status i3lock i3-gaps dmenu termite dunst
 execute_command sudo pacman -Sy hyprland hyprland-git
+execute_command sudo pacman -Sy deepin deepin-extra
 
 
 execute_command cp config_files/scripts/* ~
