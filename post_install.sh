@@ -1,5 +1,33 @@
 #! /bin/bash
 
+handle_error() {
+    echo "Error: $1"
+    cleanup
+    exit 1
+}
+
+execute_command() {
+    local confirm=$1
+    shift
+    echo "Running command: $*"
+    if [ "$confirm" == "y" ]; then
+        read -p "Do you want to execute this command? (y/n): " user_input
+        if [ "$user_input" != "y" ]; then
+            echo "Command skipped by user."
+            return
+        fi
+    fi
+    "$@"
+    if [ $? -ne 0 ]; then
+        handle_error "Command '$*' failed"
+    fi
+}
+
+wait_user() {
+    echo -e 'press any key to continue...\n'
+    read -n 1 -s -r
+}
+
 
 su -
 

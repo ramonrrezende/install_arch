@@ -10,10 +10,16 @@ handle_error() {
 }
 
 execute_command() {
+    local confirm=$1
+    shift
     echo "Running command: $*"
-    echo ""
-    echo -e 'press any key to continue...\n'
-    read -n 1 -s -r
+    if [ "$confirm" == "y" ]; then
+        read -p "Do you want to execute this command? (y/n): " user_input
+        if [ "$user_input" != "y" ]; then
+            echo "Command skipped by user."
+            return
+        fi
+    fi
     "$@"
     if [ $? -ne 0 ]; then
         handle_error "Command '$*' failed"
