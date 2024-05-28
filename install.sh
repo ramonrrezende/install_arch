@@ -1,10 +1,6 @@
 #! /bin/bash
 
-WIFI_SSID="Spock"
-WIFI_PASSWD="06051994"
-WIFI_DEVICE="wlan0"
 KEYBOARD="br-abnt2"
-DISK_DEVICE="/dev/sda"
 HOST_NAME="san"
 USER_NAME="ison"
 
