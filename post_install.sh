@@ -61,7 +61,7 @@ execute_command sudo pacman -Sy alacritty #terminal emulator
 execute_command sudo pacman -Sy gnome-extra gnome-terminal
 execute_command sudo pacman -Sy budgie-desktop
 execute_command sudo pacman -Sy i3-wm i3status i3lock i3-gaps dmenu dunst
-execute_command sudo pacman -Sy hyprland
+execute_command sudo pacman -Sy hyprland kitty
 execute_command sudo pacman -Sy deepin deepin-extra
 
 
