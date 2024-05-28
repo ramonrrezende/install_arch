@@ -52,7 +52,7 @@ execute_command useradd -m -g users -G wheel,storage,power -s /bin/bash $USER_NA
 execute_command passwd $USER_NAME
 
 # packages
-execute_command pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog
+execute_command pacman -S dosfstools os-prober mtools network-manager-applet networkmanager wpa_supplicant wireless_tools dialog iwd
 
 # UEFI
 
