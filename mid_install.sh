@@ -44,7 +44,7 @@ execute_command locale-gen
 execute_command echo KEYMAP=$KEYBOARD >> /etc/vconsole.conf
 
 # hostname
-execute_command hostnamectl set-hostname nomedoseuhost $HOST_NAME
+execute_command hostnamectl set-hostname $HOST_NAME
 execute_command passwd
 
 # add user
