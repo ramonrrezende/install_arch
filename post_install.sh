@@ -31,9 +31,11 @@ wait_user() {
 execute_command hostnamectl set-hostname $HOST_NAME
 execute_command passwd
 
-su -
-
 echo "uncoment line %wheel ALL=(ALL:ALL) ALL"
+su -
+# EDITOR=nano visudo
+
+sudo dhcpcd
 
 # graphic interface
 sudo pacman -S xorg-server xorg-xinit xorg-apps mesa
