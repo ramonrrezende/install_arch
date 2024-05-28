@@ -1,5 +1,10 @@
 #! /bin/bash
 
+KEYBOARD="br-abnt2"
+HOST_NAME="san"
+USER_NAME="ison"
+
+
 handle_error() {
     echo "Error: $1"
     cleanup
