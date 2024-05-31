@@ -28,5 +28,10 @@ wait_user() {
 
 execute_command pacman -Sy pkgfile less firefox code
 
+execute_command cp config_files/wrappedh1 /usr/local/bin
+
+execute_command cp config_files/hyprland.desktop /usr/share/wayland-sessions
+execute_command cp config_files/wrappedh1.desktop /usr/share/wayland-sessions
+
 execute_command cp config_files/* ~
 
