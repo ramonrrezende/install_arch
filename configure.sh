@@ -26,12 +26,20 @@ wait_user() {
     read -n 1 -s -r
 }
 
-execute_command pacman -Sy pkgfile less firefox code
+execute_command sudo pacman -Sy pkgfile less firefox code
+execute_command sudo pacman -Sy nvidia-dkms nvidia-open-dkms nvidia-utils lib32-nvidia-utils
 
-execute_command cp config_files/wrappedh1 /usr/local/bin
+# hyprland
+execute_command sudo pacman -Sy arcolinux-hyprland-profile-git
+execute_command sudo cp config_files/wrappedh1 /usr/local/bin
 
-execute_command cp config_files/hyprland.desktop /usr/share/wayland-sessions
-execute_command cp config_files/wrappedh1.desktop /usr/share/wayland-sessions
+execute_command sudo cp config_files/hyprland.desktop /usr/share/wayland-sessions
+execute_command sudo cp config_files/wrappedh1.desktop /usr/share/wayland-sessions
+
+execute_command sudo cp config_files/nvidia.conf /etc/modprobe.d
+execute_command sudo cp config_files/mkinitcpio.conf /etc
+execute_command sudo mkinitcpio -P
+execute_command sudo mkinitcpio --config /etc/mkinitcpio.conf --generate /boot/initramfs-custom.img
 
 execute_command cp config_files/* ~
 
